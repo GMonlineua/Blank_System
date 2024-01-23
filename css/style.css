@@ -413,5 +413,40 @@ input.clear-input:focus {
   text-align: center;
   margin: 0 6px;
 }
+.blank .resources {
+  margin-bottom: 5px;
+  align-items: baseline;
+}
+.blank .resources .resource {
+  flex: auto;
+  align-items: baseline;
+}
+.blank .resources .resource * {
+  flex: auto;
+}
+.blank .resource .resource-label {
+  font-weight: bold;
+}
+.blank .resource .resource-content {
+  display: inline;
+}
+.blank .resource input {
+  display: inline;
+}
+.blank .attributes .resource {
+  padding-top: 5px;
+  text-align: center;
+  font-size: medium;
+}
+.blank .attributes .resource .resource-label {
+  display: block;
+  margin: auto;
+  text-transform: uppercase;
+}
+.blank .attributes .resource span.plus {
+  position: relative;
+  top: 1px;
+  left: 12px;
+}
 
 /*# sourceMappingURL=style.css.map */

@@ -4,6 +4,37 @@
     <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
     <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
     <div class="description-block">
+      <div class="resources flexrow">
+        <div class="resource">
+          <label for="system.level" class="resource-label">Level:</label>
+          <input type="number" name="system.level" value="{{system.level}}" data-dtype="Number"/>
+        </div>
+        <div class="resource">
+          <label for="system.hp" class="resource-label">HP:</label>
+          <input type="number" name="system.hp.value" value="{{system.hp.value}}" data-dtype="Number"/>
+          <span> / </span>
+          <input type="number" name="system.hp.max" value="{{system.hp.max}}" data-dtype="Number"/>
+        </div>
+        <div class="resource">
+          <label for="system.score" class="resource-label">Inventory Score:</label>
+          <input type="number" name="system.score" value="{{system.score}}" data-dtype="Number"/>
+        </div>
+      </div>
+
+      <div class="resources flexrow">
+        <div class="resource">
+          <label for="system.brute" class="resource-label rollable" data-roll="2d6+@brute">Brute:</label>
+          <input type="number" name="system.brute" value="{{system.brute}}" data-dtype="Number"/>
+        </div>
+        <div class="resource">
+          <label for="system.skulker" class="resource-label rollable" data-roll="2d6+@skulker">Skulker:</label>
+          <input type="number" name="system.skulker" value="{{system.skulker}}" data-dtype="Number"/>
+        </div>
+        <div class="resource">
+          <label for="system.erudite" class="resource-label rollable" data-roll="2d6+@erudite">Erudite:</label>
+          <input type="number" name="system.erudite" value="{{system.erudite}}" data-dtype="Number"/>
+        </div>
+      </div>
       <h2>{{localize 'BLANK.Description'}}</h2>
       {{editor system.description target="system.description" button=true owner=owner editable=editable}}
     </div>
